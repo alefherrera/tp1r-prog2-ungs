@@ -27,6 +27,7 @@ public class Combinador {
                 }
         }      
  
+        //Suma todos los componentes de una lista
         public Integer suma(ArrayList<Integer> v){
                 Integer suma = 0;
                 for (int i = 0; i < v.size(); i++) {
@@ -35,8 +36,8 @@ public class Combinador {
                 return suma;
         }
        
+        //Conversion de String del numero en binario a una lista
         public ArrayList<Integer> binario_a_array(String binario){
-                ArrayList<Boolean> v = new ArrayList<Boolean>();
                 ArrayList<Integer> r = new ArrayList<Integer>();
                 int max = binario.length()-1;
                 for (int i = max; i >= 0; i--) {
