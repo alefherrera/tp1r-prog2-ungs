@@ -10,3 +10,27 @@ Pruebas
 //28 -> 76 sec
 //29 -> 156 sec
 //30 -> 320 sec
+
+package code;
+
+import java.util.ArrayList;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub	
+		Integer[] extenso = new Integer[28];
+
+		for (int i = 0; i < extenso.length; i++) extenso[i] = i;
+
+		Mochila mochilaGrande = new Mochila (extenso, 40);
+		ArrayList<ArrayList<Integer>> solucion3;
+		long tI = System.currentTimeMillis();
+		solucion3 = mochilaGrande.resolver_1a();
+		long tF = System.currentTimeMillis();
+		System.out.println((tF - tI) / 1000);
+		System.out.println(solucion3.toString());
+		
+	}
+
+}
