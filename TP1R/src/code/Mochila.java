@@ -5,23 +5,21 @@ import java.util.Arrays;
 
 public class Mochila {
 
-	private Integer maximo;
+	private Integer n;
 	private ArrayList<Integer> elementos;
 
-	public Mochila(Integer[] elem, Integer max) {
-		maximo = max;
+	public Mochila(Integer[] elem, Integer num) {
+		n = num;
 		elementos = new ArrayList<Integer>(Arrays.asList(elem));
 	}
 
 	public ArrayList<ArrayList<Integer>> resolver_1a() {
 		ArrayList<ArrayList<Integer>> solucion = new ArrayList<ArrayList<Integer>>();
 		int numero = (int) (Math.pow(2, elementos.size()) - 1);
-		int aux = 0;
 		ArrayList<Integer> r;
 		for (int i = 0; i < numero; i++) {
-			aux++;
-			r = binario_a_array(Integer.toBinaryString(aux));
-			if (suma(r) == maximo)
+			r = binario_a_array(Integer.toBinaryString(i));
+			if (suma(r) == n)
 				solucion.add(r);
 		}
 		return solucion;
